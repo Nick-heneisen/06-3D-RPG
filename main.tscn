@@ -1,0 +1,106 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/agent.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="TPS" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.26716, 0 )
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+transform = Transform( 33.1315, 0, 0, 0, 1, 0, 0, 0, 32.7122, 0, 0, 0 )
+axis_lock_motion_x = true
+axis_lock_motion_y = true
+axis_lock_motion_z = true
+move_lock_x = true
+move_lock_y = true
+move_lock_z = true
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="KinematicBody/CollisionShape"]
+mesh = SubResource( 2 )
+
+[node name="KinematicBody2" type="KinematicBody" parent="."]
+transform = Transform( 3.39008, 0, 0, 0, 0.889414, 0, 0, 0, 2.60994, 15.0548, 2.0334, 4.01136 )
+axis_lock_motion_x = true
+axis_lock_motion_y = true
+axis_lock_motion_z = true
+move_lock_x = true
+move_lock_y = true
+move_lock_z = true
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody2"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="KinematicBody2/CollisionShape"]
+mesh = SubResource( 2 )
+
+[node name="KinematicBody3" type="KinematicBody" parent="."]
+transform = Transform( 3.39008, 0, 0, 0, 0.889414, 0, 0, 0, 2.60994, -5.91885, 2.0334, -9.58987 )
+axis_lock_motion_x = true
+axis_lock_motion_y = true
+axis_lock_motion_z = true
+move_lock_x = true
+move_lock_y = true
+move_lock_z = true
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody3"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="KinematicBody3/CollisionShape"]
+mesh = SubResource( 2 )
+
+[node name="KinematicBody4" type="KinematicBody" parent="."]
+transform = Transform( 3.39008, 0, 0, 0, 0.889414, 0, 0, 0, 2.60994, -5.91885, 2.0334, 2.21182 )
+axis_lock_motion_x = true
+axis_lock_motion_y = true
+axis_lock_motion_z = true
+move_lock_x = true
+move_lock_y = true
+move_lock_z = true
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody4"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="KinematicBody4/CollisionShape"]
+mesh = SubResource( 2 )
+
+[node name="KinematicBody5" type="KinematicBody" parent="."]
+transform = Transform( 3.39008, 0, 0, 0, 0.889414, 0, 0, 0, 2.60994, 5.95336, 2.0334, 16.8153 )
+axis_lock_motion_x = true
+axis_lock_motion_y = true
+axis_lock_motion_z = true
+move_lock_x = true
+move_lock_y = true
+move_lock_z = true
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody5"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="KinematicBody5/CollisionShape"]
+mesh = SubResource( 2 )
+
+[node name="KinematicBody6" type="KinematicBody" parent="."]
+transform = Transform( 3.39008, 0, 0, 0, 0.889414, 0, 0, 0, 2.60994, 17.7037, 1.96174, -19.1004 )
+axis_lock_motion_x = true
+axis_lock_motion_y = true
+axis_lock_motion_z = true
+move_lock_x = true
+move_lock_y = true
+move_lock_z = true
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody6"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="KinematicBody6/CollisionShape"]
+mesh = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.669014, 0, -0.74325, 0, 1, 0, 0.74325, 0, -0.669014, 4.39631, 1.86443, 5.65901 )
